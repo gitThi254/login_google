@@ -16,7 +16,6 @@ export async function POST(req) {
     );
   }
   const resetToken = await user.createResetPasswordToken();
-
   await user.save({ validateBeforeSave: false });
 
   const resetUrl = `${req.headers.get("origin")}/resetPassword/${resetToken}`;

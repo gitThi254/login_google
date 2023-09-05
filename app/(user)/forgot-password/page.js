@@ -20,6 +20,8 @@ const PorgotPasswordPage = () => {
       });
       if (!res.ok) {
         throw new Error("Fail to reset Password");
+      } else {
+        alert("link đặt lại mật khẩu đã được gửi tới email của bạn");
       }
     } catch (error) {
       console.log(error.message);
